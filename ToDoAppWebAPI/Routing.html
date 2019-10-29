@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="Scripts/angular.min.js"></script>
+    <script src="Scripts/angular-route.js"></script>
+    <script src="Route.js"></script>
+    <base href="/"/>
+    <style>
+        .redColor {
+            background-color: red;
+            width: 100px;
+            height: 200px
+        }
+
+        .YellowColor {
+            background-color: yellow;
+            width: 100px;
+            height: 200px;
+        }
+    </style>
+</head>
+<body ng-app="RoutingDemo">
+    <div ng-controller="RoutingController">
+        <a href="/sample1">Sample 1</a>
+        <a href="/sample2">Sample 2</a>
+        <a href="/sample3">Sample 3</a>
+        <a href="/sample/test">RouteTest</a>
+
+        <div ng-view></div>
+    </div>
+   
+
+</body>
+</html>

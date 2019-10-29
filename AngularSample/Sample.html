@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="/Scripts/angular.js"></script>
+    <script>
+        var app = angular.module("SampleApp", []);
+        app.controller("SampleController", function ($scope) {
+            $scope.input1 = "Test1";
+            $scope.variable = "123";
+            $scope.AssignValue = function () {
+                console.log($scope.User);
+            }
+            $scope.ObjectList = ["obj1", "obj2", "obj3"];
+            var user2 = {};
+            $scope.User = {
+                id: 1,
+                Name: "User"
+            }
+        });
+
+
+    </script>
+</head>
+<body>
+    
+    <div ng-app="SampleApp">
+            <div ng-controller="SampleController">
+                <!--<input type="text" ng-model="input1" />-->
+                <!--{{ObjectList[0]}}-->
+                <input ng-bind="User.id"/> 
+                <input ng-model="User.Name"/>
+                <div ng-bind="User.Name"></div>
+                <div ng-bind="User.id"></div>
+                <button ng-click="AssignValue()">Submit</button>
+            </div>
+    </div>
+</body>
+</html>

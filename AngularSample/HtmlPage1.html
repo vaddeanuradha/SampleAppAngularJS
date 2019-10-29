@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+
+    <!--<script src="Scripts/angular.min.js"></script>-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.5/angular.min.js"></script>
+    <script>
+        var app = angular.module("app1", []);
+        app.controller("controller1", function ($scope, $rootScope) {
+            $scope.test = "test1";
+            $scope.data = "In controller1";
+            $rootScope.sharedData = "Share data in controller1";
+        });
+        app.controller("subController1", function ($scope) {
+            $scope.data2 = "In Subcontroller";
+            $scope.test = "testUpdate";
+        });
+        app.controller("controller2", function ($scope, $rootScope) {
+            $scope.test = "test2";
+            $scope.data = "Incontroller2"
+            $rootScope.sharedData = "Share data in controller2"
+        });
+    </script>
+</head>
+<body>
+    <div ng-app="app1">
+        <div ng-controller="controller1">
+            <div>test: {{test}} </div>
+            <div>data:{{data}}</div>
+            <div>shared data :{{sharedData}}</div>
+            <br/>
+            <div ng-controller="subController1">
+                <div>test: {{test}} </div>
+                <div>data:{{data}}</div>
+                <div>data2:{{data2}}</div>
+
+            </div>
+        </div>
+        <br/>
+        <div ng-controller="controller2">
+            <div>test:{{test}}</div>
+            <div>data:{{data}}</div>
+            <div>shared data :{{sharedData}}</div>
+        </div>
+    </div>
+</body>
+</html>

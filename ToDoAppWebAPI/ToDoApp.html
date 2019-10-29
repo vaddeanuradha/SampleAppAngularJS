@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="Scripts/angular.min.js"></script>
+    <script src="App.js"></script>
+</head>
+    <body ng-app="ToDoApp">
+        <div ng-controller="ToDoController">
+            <label>Enter to do:</label>
+            <input type="text" ng-model="InputData" />
+            <button ng-click="AddItem()">Add to list</button>
+            <div>To do list</div>
+            <input ng-model="searchData" />
+            <ul>
+
+                <li ng-repeat="item in list|filter:searchData">{{item}}</li>
+                <!--<li ng-repeat="item in list|filter:searchData">{{item|uppercase}}</li>-->
+               <!-- <li ng-repeat="item in Data|filter:searchData">{{item}}</li>-->
+            </ul>
+            <div>{{amount|currency}}</div>
+            <div ng-repeat="article in Data.articles">
+                <img ng-src="{{article.urlToImage}}" />
+                <div>{{article.description}}</div>
+            </div>
+
+        </div>
+
+    </body>
+</html>

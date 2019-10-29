@@ -1,0 +1,8 @@
+﻿<div ng-controller="EmployeeListController">
+    <h3>Employees List</h3>
+    <div>
+        <ul><li ng-repeat="employee in EmployeeList">
+            <a href="/Employees/{{employee.Id}}">{{employee.Name}}</a>
+        </li></ul>
+    </div>
+</div>

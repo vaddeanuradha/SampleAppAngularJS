@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <base href="/" />
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+    <script src="Scripts/angular.min.js"></script>
+    <script src="Scripts/angular-route.js"></script>
+    <script src="Employee.js"></script>
+    <style>
+        a {
+            color: white !important
+        }
+        .options{
+            padding:20px 20px 20px 20px;
+            border-bottom: white;
+            border-bottom-style: solid;
+        }
+    </style>
+</head>
+<body ng-app="EmployeesDemo" style="background-color:lightgray">
+    <div ng-controller="EmployeeDemoController" class="container container-fluid" style="margin:0%">
+        <div class="row">
+            <div class="col-sm-3" style="background-color:black;min-height:800px; color:white;">
+                <div class="row justify-center options" ><a class="col-sm-12" href="/Home">Home</a></div>
+                <div class="row justify-center options" ><a class="col-sm-12" href="/Employees">Employees</a></div>
+                <div class="row justify-center options" ><a class="col-sm-12" href="About">About</a></div>
+            </div>
+            <div class="col-sm-9" style="background-color:lightgray;min-height:800px;"><div ng-view></div></div>
+        </div>
+    </div>
+
+</body>

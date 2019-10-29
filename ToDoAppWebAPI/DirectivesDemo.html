@@ -1,0 +1,34 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="Scripts/angular.min.js"></script>
+    <script src="DirectivesApp.js"></script>
+    <style>
+        .redColor {
+            background-color: red;
+            width: 100px;
+            height: 200px
+        }
+
+        .YellowColor {
+            background-color: yellow;
+            width: 100px;
+            height: 200px;
+        }
+    </style>
+
+</head>
+<body ng-app="DirectivesDemo">
+    <div ng-controller="DirectivesController">
+        <!--<div id="style1" ng-class="{'redColor':ShowFirstSet==true,'YellowColor':ShowFirstSet==false}">
+
+                style1
+            </div>-->
+        <img ng-src="{{ShowFirstSet==true?'Content/images/cartoon.jpg':'Content/images/cartoon1.jpg'}}" style="width:200px;height:200px;" />
+        <button ng-click="toggleData()">Toggle</button>
+        <button ng-click="Submit()">Submit</button>
+    </div>
+</body>
+</html>

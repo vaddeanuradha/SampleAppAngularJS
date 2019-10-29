@@ -1,0 +1,12 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs
+/AngularSample/bin
+/AngularSample/obj
+/ToDoAppWebAPI/bin
+/ToDoAppWebAPI/obj/Debug
+/WebApplication1/bin
+/WebApplication1/obj
+/WebApplication2/obj
